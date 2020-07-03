@@ -34,6 +34,12 @@ public class UITestsStepDefs {
 		loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
 	}
 
+	@Given("^user in Mt Lebanon parking authority Page$")
+	public void user_in_Mt_Lebanon_parking_authority_Page() {
+		driver.get(ConfigurationReader.getProperty("url_parking"));
+		
+	}
+	
 	@Then("^CRM name should be SuiteCRM$")
 	public void crm_name_should_be_SuiteCRM() {
 		assertTrue(driver.getTitle().endsWith("SuiteCRM"));

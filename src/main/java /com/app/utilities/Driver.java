@@ -20,8 +20,15 @@ public class Driver {
 				driver = new FirefoxDriver();
 				break;
 			case "chrome":
-				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+ 
+
+				 System.setProperty("webdriver.chrome.driver", "/Users/ulugbek/Downloads/chromedriver");
+	            	driver=new ChromeDriver();
+				
+				
+				
+//				WebDriverManager.chromedriver().setup();
+//				driver = new ChromeDriver();
 				break;
 			default:
 				WebDriverManager.firefoxdriver().setup();
